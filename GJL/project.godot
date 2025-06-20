@@ -11,16 +11,20 @@ config_version=5
 [application]
 
 config/name="Centifeed"
-run/main_scene="res://Prototyping/Test.tscn"
+run/main_scene="res://Scenes/main_menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 boot_splash/bg_color=Color(0, 0, 0, 1)
 config/icon="res://icon.svg"
+
+[autoload]
+
+StatsHolder="*res://stats_holder.gd"
 
 [display]
 
 window/size/mode=2
 window/stretch/mode="canvas_items"
-window/stretch/aspect="expand"
+window/stretch/aspect="ignore"
 
 [input]
 

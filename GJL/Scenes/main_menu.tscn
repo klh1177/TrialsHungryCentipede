@@ -1,0 +1,641 @@
+[gd_scene load_steps=21 format=3 uid="uid://wolegvxutxh3"]
+
+[ext_resource type="FontFile" uid="uid://blgxwjhg7kapl" path="res://Imports/vtf-misterpixel.regular.otf" id="1_f1gur"]
+[ext_resource type="Script" path="res://Scripts/Menu.gd" id="1_wy0o4"]
+[ext_resource type="Texture2D" uid="uid://ijhoprj5jgui" path="res://Entity_TileSets/FireflyW1.png" id="2_o6bwb"]
+[ext_resource type="Texture2D" uid="uid://c8lprho05nnsg" path="res://KennyKeys/keyboard_arrow_down_outline.png" id="3_fk8dh"]
+[ext_resource type="Texture2D" uid="uid://dr10laba6ft7d" path="res://Entity_TileSets/C_PlayButton.png" id="4_1ey50"]
+[ext_resource type="Texture2D" uid="uid://dy8fmc2jkw21s" path="res://KennyKeys/keyboard_arrow_left_outline.png" id="4_o44jp"]
+[ext_resource type="Texture2D" uid="uid://wy7738ls7os4" path="res://KennyKeys/keyboard_arrow_right_outline.png" id="5_oovn3"]
+[ext_resource type="Texture2D" uid="uid://buvyk4b04hqfk" path="res://Entity_TileSets/C_CredButton.png" id="5_wypck"]
+[ext_resource type="Texture2D" uid="uid://dcg7krj7nwtwy" path="res://KennyKeys/keyboard_arrow_up_outline.png" id="6_l603v"]
+[ext_resource type="Texture2D" uid="uid://cnb17qaltg85y" path="res://Entity_TileSets/C_PrevButton.png" id="6_n66bf"]
+[ext_resource type="Texture2D" uid="uid://bkbwwcodhduvx" path="res://KennyKeys/keyboard_a_outline.png" id="7_tia2q"]
+[ext_resource type="Texture2D" uid="uid://i1o37aonmobu" path="res://KennyKeys/keyboard_d_outline.png" id="8_wowwm"]
+[ext_resource type="Texture2D" uid="uid://crhfd8ygfulbl" path="res://KennyKeys/keyboard_s_outline.png" id="9_tk7dx"]
+[ext_resource type="Texture2D" uid="uid://c2bwgakrdhwga" path="res://KennyKeys/keyboard_w_outline.png" id="10_36l3o"]
+[ext_resource type="Texture2D" uid="uid://503nunw8ty1y" path="res://Entity_TileSets/FireflyA1.png" id="11_l2aw5"]
+[ext_resource type="Texture2D" uid="uid://bt0cutcry7lwx" path="res://Entity_TileSets/FireflyD1.png" id="12_mdxu6"]
+[ext_resource type="Texture2D" uid="uid://df68sx43g438p" path="res://Entity_TileSets/Collectible.png" id="13_exg0i"]
+[ext_resource type="Texture2D" uid="uid://myb8kikwpwp0" path="res://Entity_TileSets/Plate.png" id="14_utquh"]
+[ext_resource type="Texture2D" uid="uid://b44midaxiqn0j" path="res://Entity_TileSets/CentiHead.png" id="15_ofwfl"]
+[ext_resource type="Texture2D" uid="uid://b6o8kvk2ivlml" path="res://Entity_TileSets/C_BackButton.png" id="20_xia31"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wy0o4")
+
+[node name="BG" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="BG"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0.0313726, 0.0784314, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="BG"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 649.0
+color = Color(0, 0.113725, 0.239216, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="BG"]
+layout_mode = 0
+offset_left = 1112.0
+offset_right = 1152.0
+offset_bottom = 649.0
+color = Color(0, 0.113725, 0.239216, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="BG"]
+layout_mode = 0
+offset_left = 577.0
+offset_right = 592.0
+offset_bottom = 649.0
+color = Color(0, 0.113725, 0.239216, 1)
+
+[node name="TitleScreen" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Title" type="RichTextLabel" parent="TitleScreen"]
+layout_mode = 0
+offset_left = 70.0
+offset_top = 91.0
+offset_right = 597.0
+offset_bottom = 218.0
+theme_override_colors/default_color = Color(1, 0.764706, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 54
+text = "    TRIALS OF THE
+HUNGRY CENTIPEDE"
+
+[node name="FireflyW1" type="TextureButton" parent="TitleScreen"]
+layout_mode = 0
+offset_left = 268.0
+offset_top = 541.0
+offset_right = 300.0
+offset_bottom = 573.0
+scale = Vector2(2.65625, 2.65625)
+texture_normal = ExtResource("2_o6bwb")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MusicIndicator" type="RichTextLabel" parent="TitleScreen"]
+layout_mode = 0
+offset_left = 278.0
+offset_top = 618.0
+offset_right = 389.0
+offset_bottom = 658.0
+theme_override_colors/default_color = Color(1, 0.839216, 0.0392157, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 15
+text = "MUSIC: ON"
+
+[node name="PlayButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 215.0
+offset_top = 252.0
+offset_right = 400.0
+offset_bottom = 324.0
+texture_normal = ExtResource("4_1ey50")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="CreditsButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 215.0
+offset_top = 352.0
+offset_right = 400.0
+offset_bottom = 424.0
+texture_normal = ExtResource("5_wypck")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="LastRoundButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_left = 215.0
+offset_top = 458.0
+offset_right = 400.0
+offset_bottom = 530.0
+texture_normal = ExtResource("6_n66bf")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="How2Play" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect5" type="ColorRect" parent="How2Play"]
+layout_mode = 0
+offset_left = 689.0
+offset_top = 60.0
+offset_right = 1018.0
+offset_bottom = 63.0
+color = Color(1, 0.839216, 0.0392157, 1)
+
+[node name="HowPlay" type="RichTextLabel" parent="How2Play"]
+layout_mode = 0
+offset_left = 715.0
+offset_top = 15.0
+offset_right = 996.0
+offset_bottom = 102.0
+theme_override_colors/default_color = Color(1, 0.764706, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 44
+text = "HOW TO PLAY"
+
+[node name="Logo" type="RichTextLabel" parent="How2Play"]
+layout_mode = 0
+offset_left = 940.0
+offset_top = 629.0
+offset_right = 1111.0
+offset_bottom = 658.0
+theme_override_colors/default_color = Color(1, 0.764706, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 18
+text = "HIGH GARDEN GAMES"
+
+[node name="Desc" type="RichTextLabel" parent="How2Play"]
+layout_mode = 0
+offset_left = 746.0
+offset_top = 130.0
+offset_right = 955.0
+offset_bottom = 188.0
+theme_override_colors/default_color = Color(1, 0.764706, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "[center]USE ARROW KEYS (OR WASD) TO NAVIGATE THE MAZE [center]"
+
+[node name="Desc2" type="RichTextLabel" parent="How2Play"]
+layout_mode = 0
+offset_left = 624.0
+offset_top = 244.0
+offset_right = 833.0
+offset_bottom = 302.0
+theme_override_colors/default_color = Color(1, 0.764706, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "FOLLOW THE SOUNDS TO COLLECT AND RETURN FRUIT"
+
+[node name="Desc3" type="RichTextLabel" parent="How2Play"]
+layout_mode = 0
+offset_left = 865.0
+offset_top = 346.0
+offset_right = 1074.0
+offset_bottom = 404.0
+theme_override_colors/default_color = Color(1, 0.764706, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 18
+bbcode_enabled = true
+text = "MEET THE QUOTA BEFORE THE TIMER RUNS OUT"
+text_direction = 2
+
+[node name="Desc5" type="RichTextLabel" parent="How2Play"]
+layout_mode = 0
+offset_left = 719.0
+offset_top = 447.0
+offset_right = 993.0
+offset_bottom = 505.0
+theme_override_colors/default_color = Color(1, 0.764706, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+text = "[center]SURVIVE AS LONG AS POSSIBLE![center]"
+
+[node name="Desc4" type="RichTextLabel" parent="How2Play"]
+layout_mode = 0
+offset_left = 695.0
+offset_top = 345.0
+offset_right = 767.0
+offset_bottom = 403.0
+theme_override_colors/default_color = Color(1, 0.839216, 0.0392157, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 40
+bbcode_enabled = true
+text = "3/4"
+text_direction = 2
+
+[node name="Keys" type="Control" parent="How2Play"]
+anchors_preset = 0
+offset_left = -1.0
+offset_top = 26.0
+offset_right = 39.0
+offset_bottom = 66.0
+
+[node name="KeyboardArrowDownOutline" type="Sprite2D" parent="How2Play/Keys"]
+position = Vector2(681, 144)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("3_fk8dh")
+
+[node name="KeyboardArrowLeftOutline" type="Sprite2D" parent="How2Play/Keys"]
+position = Vector2(651, 144)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("4_o44jp")
+
+[node name="KeyboardArrowRightOutline" type="Sprite2D" parent="How2Play/Keys"]
+position = Vector2(711, 144)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_oovn3")
+
+[node name="KeyboardArrowUpOutline" type="Sprite2D" parent="How2Play/Keys"]
+position = Vector2(681, 116)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_l603v")
+
+[node name="KeyboardAOutline" type="Sprite2D" parent="How2Play/Keys"]
+position = Vector2(998, 147)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("7_tia2q")
+
+[node name="KeyboardDOutline" type="Sprite2D" parent="How2Play/Keys"]
+position = Vector2(1054, 147)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("8_wowwm")
+
+[node name="KeyboardSOutline" type="Sprite2D" parent="How2Play/Keys"]
+position = Vector2(1026, 147)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("9_tk7dx")
+
+[node name="KeyboardWOutline" type="Sprite2D" parent="How2Play/Keys"]
+position = Vector2(1026, 119)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("10_36l3o")
+
+[node name="FireflyA1" type="Sprite2D" parent="How2Play"]
+position = Vector2(907, 263)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("11_l2aw5")
+
+[node name="FireflyA2" type="Sprite2D" parent="How2Play"]
+position = Vector2(988, 263)
+scale = Vector2(1.25, 1.25)
+texture = ExtResource("12_mdxu6")
+
+[node name="Collectible" type="Sprite2D" parent="How2Play"]
+position = Vector2(862, 259)
+texture = ExtResource("13_exg0i")
+
+[node name="Plate" type="Sprite2D" parent="How2Play"]
+position = Vector2(1039, 261)
+texture = ExtResource("14_utquh")
+
+[node name="CentiHead" type="Sprite2D" parent="How2Play"]
+position = Vector2(762, 619)
+scale = Vector2(2, 2)
+texture = ExtResource("15_ofwfl")
+
+[node name="Credits" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Credits"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0.0313726, 0.0784314, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Credits"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 649.0
+color = Color(0, 0.113725, 0.239216, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Credits"]
+layout_mode = 0
+offset_left = 1112.0
+offset_right = 1152.0
+offset_bottom = 649.0
+color = Color(0, 0.113725, 0.239216, 1)
+
+[node name="Title2" type="RichTextLabel" parent="Credits"]
+layout_mode = 0
+offset_left = 480.0
+offset_top = 25.0
+offset_right = 691.0
+offset_bottom = 98.0
+theme_override_colors/default_color = Color(1, 0.764706, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 54
+text = "Credits"
+
+[node name="Desc" type="RichTextLabel" parent="Credits"]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 99.0
+offset_right = 1069.0
+offset_bottom = 172.0
+theme_override_colors/default_color = Color(1, 0.839216, 0.0392157, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 26
+text = "CREATED BY HIGH GARDEN GAMES FOR GJL GAMES PARADE SPRING 2025"
+
+[node name="Desc2" type="RichTextLabel" parent="Credits"]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 156.0
+offset_right = 1069.0
+offset_bottom = 229.0
+theme_override_colors/default_color = Color(1, 0.839216, 0.0392157, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 26
+text = "MADE IN GODOT 4, AN ENIGNE UNDER THE MIT LISCENCE (https://godotengine.org/license/)"
+
+[node name="Desc3" type="RichTextLabel" parent="Credits"]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 244.0
+offset_right = 1069.0
+offset_bottom = 290.0
+theme_override_colors/default_color = Color(1, 0.839216, 0.0392157, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 26
+text = "ASSETS MADE IN PISKEL, MUSIC MADE IN BEEPBOX"
+
+[node name="Desc4" type="RichTextLabel" parent="Credits"]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 310.0
+offset_right = 1069.0
+offset_bottom = 356.0
+theme_override_colors/default_color = Color(1, 0.839216, 0.0392157, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 26
+text = "SOUND FX MADE IN CHIPTONE (https://sfbgames.itch.io/chiptone)"
+
+[node name="Desc5" type="RichTextLabel" parent="Credits"]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 369.0
+offset_right = 1069.0
+offset_bottom = 415.0
+theme_override_colors/default_color = Color(1, 0.839216, 0.0392157, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 26
+text = "WASD AND ARROW KEY ICONS FROM KENNY.NL's INPUT PROMPTS PACK"
+
+[node name="Desc6" type="RichTextLabel" parent="Credits"]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 431.0
+offset_right = 1069.0
+offset_bottom = 477.0
+theme_override_colors/default_color = Color(1, 0.839216, 0.0392157, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 26
+text = "VTF MisterPixel FONT FROM 1001FONTS BY Velvetyne Type Foundry"
+
+[node name="Desc7" type="RichTextLabel" parent="Credits"]
+layout_mode = 0
+offset_left = 87.0
+offset_top = 486.0
+offset_right = 1069.0
+offset_bottom = 532.0
+theme_override_colors/default_color = Color(1, 0.839216, 0.0392157, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 26
+text = "POINT LIGHT ASSET created by GODOT"
+
+[node name="BackButton" type="TextureButton" parent="Credits"]
+layout_mode = 0
+offset_left = 485.0
+offset_top = 540.0
+offset_right = 670.0
+offset_bottom = 612.0
+texture_normal = ExtResource("20_xia31")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Stats" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="Stats"]
+layout_mode = 0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0.0313726, 0.0784314, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="Stats"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 649.0
+color = Color(0, 0.113725, 0.239216, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Stats"]
+layout_mode = 0
+offset_left = 1112.0
+offset_right = 1152.0
+offset_bottom = 649.0
+color = Color(0, 0.113725, 0.239216, 1)
+
+[node name="Title2" type="RichTextLabel" parent="Stats"]
+layout_mode = 0
+offset_left = 483.0
+offset_top = 25.0
+offset_right = 694.0
+offset_bottom = 98.0
+theme_override_colors/default_color = Color(1, 0.764706, 0, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 54
+text = "STATS"
+
+[node name="Scores" type="RichTextLabel" parent="Stats"]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 99.0
+offset_right = 363.0
+offset_bottom = 172.0
+theme_override_colors/default_color = Color(1, 0.839216, 0.0392157, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 35
+text = "TOP SCORES:"
+
+[node name="Score1" type="RichTextLabel" parent="Stats"]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 152.0
+offset_right = 429.0
+offset_bottom = 204.0
+theme_override_colors/default_color = Color(1, 0.839216, 0.0392157, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 30
+text = "#1:"
+
+[node name="Score2" type="RichTextLabel" parent="Stats"]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 198.0
+offset_right = 429.0
+offset_bottom = 250.0
+theme_override_colors/default_color = Color(1, 0.839216, 0.0392157, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 30
+text = "#2:"
+
+[node name="Score3" type="RichTextLabel" parent="Stats"]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 246.0
+offset_right = 429.0
+offset_bottom = 298.0
+theme_override_colors/default_color = Color(1, 0.839216, 0.0392157, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 30
+text = "#3:"
+
+[node name="Score4" type="RichTextLabel" parent="Stats"]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 289.0
+offset_right = 429.0
+offset_bottom = 341.0
+theme_override_colors/default_color = Color(1, 0.839216, 0.0392157, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 30
+text = "#4:"
+
+[node name="Score5" type="RichTextLabel" parent="Stats"]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 337.0
+offset_right = 429.0
+offset_bottom = 389.0
+theme_override_colors/default_color = Color(1, 0.839216, 0.0392157, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 30
+text = "#5:"
+
+[node name="Score6" type="RichTextLabel" parent="Stats"]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 384.0
+offset_right = 429.0
+offset_bottom = 436.0
+theme_override_colors/default_color = Color(1, 0.839216, 0.0392157, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 30
+text = "#6:"
+
+[node name="Score7" type="RichTextLabel" parent="Stats"]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 432.0
+offset_right = 429.0
+offset_bottom = 484.0
+theme_override_colors/default_color = Color(1, 0.839216, 0.0392157, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 30
+text = "#7:"
+
+[node name="Score8" type="RichTextLabel" parent="Stats"]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 480.0
+offset_right = 429.0
+offset_bottom = 532.0
+theme_override_colors/default_color = Color(1, 0.839216, 0.0392157, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 30
+text = "#8:"
+
+[node name="Score9" type="RichTextLabel" parent="Stats"]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 526.0
+offset_right = 429.0
+offset_bottom = 578.0
+theme_override_colors/default_color = Color(1, 0.839216, 0.0392157, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 30
+text = "#9:"
+
+[node name="Score10" type="RichTextLabel" parent="Stats"]
+layout_mode = 0
+offset_left = 63.0
+offset_top = 577.0
+offset_right = 429.0
+offset_bottom = 629.0
+theme_override_colors/default_color = Color(1, 0.839216, 0.0392157, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 30
+text = "#10:"
+
+[node name="Round" type="RichTextLabel" parent="Stats"]
+layout_mode = 0
+offset_left = 779.0
+offset_top = 170.0
+offset_right = 998.0
+offset_bottom = 243.0
+theme_override_colors/default_color = Color(1, 0.839216, 0.0392157, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 35
+text = "LAST ROUND:"
+
+[node name="LastScore" type="RichTextLabel" parent="Stats"]
+layout_mode = 0
+offset_left = 682.0
+offset_top = 240.0
+offset_right = 1105.0
+offset_bottom = 292.0
+theme_override_colors/default_color = Color(1, 0.839216, 0.0392157, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 30
+text = "SCORE:"
+
+[node name="LastTime" type="RichTextLabel" parent="Stats"]
+layout_mode = 0
+offset_left = 682.0
+offset_top = 308.0
+offset_right = 1105.0
+offset_bottom = 360.0
+theme_override_colors/default_color = Color(1, 0.839216, 0.0392157, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 30
+text = "TOTAL TIME:"
+
+[node name="LastFruit" type="RichTextLabel" parent="Stats"]
+layout_mode = 0
+offset_left = 682.0
+offset_top = 386.0
+offset_right = 1105.0
+offset_bottom = 438.0
+theme_override_colors/default_color = Color(1, 0.839216, 0.0392157, 1)
+theme_override_fonts/normal_font = ExtResource("1_f1gur")
+theme_override_font_sizes/normal_font_size = 30
+text = "TOTAL FRUIT:"
+
+[node name="BackButton" type="TextureButton" parent="Stats"]
+layout_mode = 0
+offset_left = 485.0
+offset_top = 540.0
+offset_right = 670.0
+offset_bottom = 612.0
+texture_normal = ExtResource("20_xia31")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="MenuPlayer" type="AudioStreamPlayer" parent="."]
+
+[connection signal="pressed" from="TitleScreen/FireflyW1" to="." method="_on_firefly_w_1_pressed"]
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="CreditsButton" to="." method="_on_credits_button_pressed"]
+[connection signal="pressed" from="LastRoundButton" to="." method="_on_last_round_button_pressed"]
+[connection signal="pressed" from="Credits/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="Stats/BackButton" to="." method="_on_stat_back_button_pressed"]

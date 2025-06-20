@@ -48,6 +48,7 @@ func SetSpeed(num):
 	SPEED = num
 
 func _process(delta):
+	#THIS WORKS FOR DIRECTION CHANGE BUT ANIMATION DOESN"T WORK. KEEPING ANYWAY FOR NOW
 	if velocity.y > 0:
 		if posmod(snappedi($"../LevelTimer".wait_time, 1) , 4)  == 0:
 			$Sprite2D.texture = downEven

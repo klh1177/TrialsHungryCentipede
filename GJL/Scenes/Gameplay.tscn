@@ -1,62 +1,64 @@
-[gd_scene load_steps=85 format=3 uid="uid://chcgwefsvftrd"]
+[gd_scene load_steps=87 format=3 uid="uid://dfti3rtrq6eo2"]
 
-[ext_resource type="Texture2D" uid="uid://die7nj1ix40kh" path="res://Prototyping/GroundPl.png" id="1_0hdpn"]
-[ext_resource type="Script" path="res://Prototyping/Gameplay.gd" id="1_qi4l6"]
-[ext_resource type="Texture2D" uid="uid://0o5jgni4fgq2" path="res://Prototyping/HedgeSqPl.png" id="2_mkjy8"]
-[ext_resource type="Script" path="res://Prototyping/Move.gd" id="3_86sf8"]
-[ext_resource type="Texture2D" uid="uid://dy3um3hmhs1q2" path="res://Prototyping/neutral.webp" id="4_025i8"]
-[ext_resource type="Texture2D" uid="uid://cwhwaf4xwi62n" path="res://BG_Tilesets/RailGlow4.png" id="4_knt0s"]
-[ext_resource type="Texture2D" uid="uid://8uac5oy10347" path="res://Prototyping/playerPl.png" id="5_5ru8r"]
-[ext_resource type="Texture2D" uid="uid://b8fw482y62klk" path="res://BG_Tilesets/RailGlowBL.png" id="5_igldy"]
-[ext_resource type="Texture2D" uid="uid://csueil0um5am2" path="res://BG_Tilesets/RailGlowBR.png" id="6_qaa6s"]
-[ext_resource type="Texture2D" uid="uid://rktyg0grioi4" path="res://BG_Tilesets/RailGlowTL.png" id="7_e0t7j"]
-[ext_resource type="AudioStream" uid="uid://ceicqu87wcn0" path="res://Prototyping/IntoSky_Enter.wav" id="7_ka6ix"]
-[ext_resource type="Script" path="res://Prototyping/Centipede.gd" id="8_i0fpj"]
-[ext_resource type="Texture2D" uid="uid://cbfm0d8s36plh" path="res://BG_Tilesets/RailGlowTR.png" id="8_mip5w"]
-[ext_resource type="Texture2D" uid="uid://dyxbaglxkxkiu" path="res://BG_Tilesets/RailStraight1.png" id="9_5ktcj"]
-[ext_resource type="Script" path="res://Prototyping/CentiBody.gd" id="9_a2ooy"]
-[ext_resource type="Texture2D" uid="uid://bbl1ss6sx44a8" path="res://BG_Tilesets/RailStraight2.png" id="10_xcq7r"]
-[ext_resource type="Texture2D" uid="uid://b352y5xkp4pp0" path="res://BG_Tilesets/RailStraight3.png" id="11_j4j5i"]
-[ext_resource type="Texture2D" uid="uid://x1gbmrudedih" path="res://BG_Tilesets/RailStraight4.png" id="12_ujf8s"]
-[ext_resource type="Texture2D" uid="uid://yyk5ffnhag5e" path="res://BG_Tilesets/Wall3B.png" id="13_sulo3"]
-[ext_resource type="Texture2D" uid="uid://dg0ok6niqlbyu" path="res://BG_Tilesets/MazeFloor.png" id="14_sbiwm"]
-[ext_resource type="Texture2D" uid="uid://bxx5wrfvvwxm6" path="res://BG_Tilesets/Wall3L.png" id="15_tjraa"]
-[ext_resource type="Texture2D" uid="uid://bs7ljtnuvegr1" path="res://BG_Tilesets/Wall3R.png" id="16_tl2q7"]
-[ext_resource type="Texture2D" uid="uid://bjbtq3ln28dij" path="res://BG_Tilesets/Wall3T.png" id="17_4w0c5"]
-[ext_resource type="Texture2D" uid="uid://c17cs1sxkcu17" path="res://BG_Tilesets/WallBL.png" id="18_adfp7"]
-[ext_resource type="Texture2D" uid="uid://wxk5qcnsnn0" path="res://BG_Tilesets/WallBR.png" id="19_j86k5"]
-[ext_resource type="Texture2D" uid="uid://et1ons17bo3v" path="res://BG_Tilesets/WallHo.png" id="20_2b8am"]
-[ext_resource type="Texture2D" uid="uid://donohmlps8rgo" path="res://BG_Tilesets/WallInt4.png" id="21_n1uxc"]
-[ext_resource type="Texture2D" uid="uid://dui2xlroxer42" path="res://BG_Tilesets/WallTL.png" id="22_ojnas"]
-[ext_resource type="Texture2D" uid="uid://d01kbkmfkb0bm" path="res://BG_Tilesets/WallTR.png" id="23_m5es4"]
-[ext_resource type="Texture2D" uid="uid://6635a8ool2nb" path="res://BG_Tilesets/WallVer.png" id="24_ya1jk"]
-[ext_resource type="Texture2D" uid="uid://cr75i0ksmqpan" path="res://BG_Tilesets/RailCornerBL.png" id="25_n6rlx"]
-[ext_resource type="Texture2D" uid="uid://b2lvhfe3hwl63" path="res://BG_Tilesets/RailCornerBR.png" id="26_25poj"]
-[ext_resource type="Texture2D" uid="uid://btvdx53bceo2y" path="res://BG_Tilesets/MazeFloorBlue1.png" id="26_v55d6"]
-[ext_resource type="Texture2D" uid="uid://curlfwjytkla1" path="res://BG_Tilesets/RailCornerTL.png" id="27_jq7kt"]
-[ext_resource type="Texture2D" uid="uid://qcb1f1yps2tq" path="res://BG_Tilesets/BlueFloor2.png" id="27_q84q2"]
-[ext_resource type="Texture2D" uid="uid://di6xba45vukmh" path="res://BG_Tilesets/RailCornerTR.png" id="28_icece"]
-[ext_resource type="Texture2D" uid="uid://bf2netem7kkso" path="res://BG_Tilesets/RailGlow1.png" id="29_o4lgq"]
-[ext_resource type="Texture2D" uid="uid://3ke8r1ekeps" path="res://BG_Tilesets/RailGlow2.png" id="30_qjyjr"]
-[ext_resource type="Texture2D" uid="uid://c0sfbtlpkdor3" path="res://BG_Tilesets/RailGlow3.png" id="31_nciy8"]
-[ext_resource type="Texture2D" uid="uid://df68sx43g438p" path="res://Entity_TileSets/Collectible.png" id="34_gq73r"]
-[ext_resource type="Texture2D" uid="uid://myb8kikwpwp0" path="res://Entity_TileSets/Plate.png" id="36_8lgop"]
-[ext_resource type="Texture2D" uid="uid://c8tkalqyu66ub" path="res://Entity_TileSets/PlateGlow.png" id="37_0fslv"]
-[ext_resource type="Texture2D" uid="uid://cxef5uxyobylb" path="res://Entity_TileSets/FireflyS1.png" id="37_u0nec"]
-[ext_resource type="Texture2D" uid="uid://ca5f4b0vlomu4" path="res://BG_Tilesets/GlowFrameB.png" id="38_jfjol"]
-[ext_resource type="FontFile" uid="uid://blgxwjhg7kapl" path="res://Imports/vtf-misterpixel.regular.otf" id="40_wmurt"]
-[ext_resource type="Texture2D" uid="uid://b44midaxiqn0j" path="res://Entity_TileSets/CentiHead.png" id="42_wwf6u"]
-[ext_resource type="Texture2D" uid="uid://4c4qiiykfcpn" path="res://Entity_TileSets/CentiBod.png" id="43_7sg8a"]
+[ext_resource type="Script" path="res://Prototyping/Gameplay.gd" id="1_p1m0o"]
+[ext_resource type="Texture2D" uid="uid://die7nj1ix40kh" path="res://Prototyping/GroundPl.png" id="2_dd4q8"]
+[ext_resource type="Texture2D" uid="uid://0o5jgni4fgq2" path="res://Prototyping/HedgeSqPl.png" id="3_2d42i"]
+[ext_resource type="Texture2D" uid="uid://cwhwaf4xwi62n" path="res://BG_Tilesets/RailGlow4.png" id="4_80k6x"]
+[ext_resource type="Texture2D" uid="uid://b8fw482y62klk" path="res://BG_Tilesets/RailGlowBL.png" id="5_ajplw"]
+[ext_resource type="Texture2D" uid="uid://csueil0um5am2" path="res://BG_Tilesets/RailGlowBR.png" id="6_31f4k"]
+[ext_resource type="Texture2D" uid="uid://rktyg0grioi4" path="res://BG_Tilesets/RailGlowTL.png" id="7_6302r"]
+[ext_resource type="Texture2D" uid="uid://cbfm0d8s36plh" path="res://BG_Tilesets/RailGlowTR.png" id="8_gk4du"]
+[ext_resource type="Texture2D" uid="uid://dyxbaglxkxkiu" path="res://BG_Tilesets/RailStraight1.png" id="9_4fknt"]
+[ext_resource type="Texture2D" uid="uid://bbl1ss6sx44a8" path="res://BG_Tilesets/RailStraight2.png" id="10_eaodf"]
+[ext_resource type="Texture2D" uid="uid://b352y5xkp4pp0" path="res://BG_Tilesets/RailStraight3.png" id="11_bo1jg"]
+[ext_resource type="Texture2D" uid="uid://x1gbmrudedih" path="res://BG_Tilesets/RailStraight4.png" id="12_c1883"]
+[ext_resource type="Texture2D" uid="uid://yyk5ffnhag5e" path="res://BG_Tilesets/Wall3B.png" id="13_mbiv7"]
+[ext_resource type="Texture2D" uid="uid://dg0ok6niqlbyu" path="res://BG_Tilesets/MazeFloor.png" id="14_s83cg"]
+[ext_resource type="Texture2D" uid="uid://bxx5wrfvvwxm6" path="res://BG_Tilesets/Wall3L.png" id="15_5r5bk"]
+[ext_resource type="Texture2D" uid="uid://bs7ljtnuvegr1" path="res://BG_Tilesets/Wall3R.png" id="16_n6k3n"]
+[ext_resource type="Texture2D" uid="uid://bjbtq3ln28dij" path="res://BG_Tilesets/Wall3T.png" id="17_30mh5"]
+[ext_resource type="Texture2D" uid="uid://c17cs1sxkcu17" path="res://BG_Tilesets/WallBL.png" id="18_s8uar"]
+[ext_resource type="Texture2D" uid="uid://wxk5qcnsnn0" path="res://BG_Tilesets/WallBR.png" id="19_v6htt"]
+[ext_resource type="Texture2D" uid="uid://et1ons17bo3v" path="res://BG_Tilesets/WallHo.png" id="20_pk3uw"]
+[ext_resource type="Texture2D" uid="uid://donohmlps8rgo" path="res://BG_Tilesets/WallInt4.png" id="21_cns4f"]
+[ext_resource type="Texture2D" uid="uid://dui2xlroxer42" path="res://BG_Tilesets/WallTL.png" id="22_utkph"]
+[ext_resource type="Texture2D" uid="uid://d01kbkmfkb0bm" path="res://BG_Tilesets/WallTR.png" id="23_5qfj7"]
+[ext_resource type="Texture2D" uid="uid://6635a8ool2nb" path="res://BG_Tilesets/WallVer.png" id="24_r7hnl"]
+[ext_resource type="Texture2D" uid="uid://cr75i0ksmqpan" path="res://BG_Tilesets/RailCornerBL.png" id="25_2weoq"]
+[ext_resource type="Texture2D" uid="uid://btvdx53bceo2y" path="res://BG_Tilesets/MazeFloorBlue1.png" id="26_pay6j"]
+[ext_resource type="Texture2D" uid="uid://qcb1f1yps2tq" path="res://BG_Tilesets/BlueFloor2.png" id="27_26k87"]
+[ext_resource type="Texture2D" uid="uid://b2lvhfe3hwl63" path="res://BG_Tilesets/RailCornerBR.png" id="28_jovcp"]
+[ext_resource type="Texture2D" uid="uid://curlfwjytkla1" path="res://BG_Tilesets/RailCornerTL.png" id="29_gwjyp"]
+[ext_resource type="Texture2D" uid="uid://di6xba45vukmh" path="res://BG_Tilesets/RailCornerTR.png" id="30_2qha8"]
+[ext_resource type="Texture2D" uid="uid://bf2netem7kkso" path="res://BG_Tilesets/RailGlow1.png" id="31_6ld3t"]
+[ext_resource type="Texture2D" uid="uid://3ke8r1ekeps" path="res://BG_Tilesets/RailGlow2.png" id="32_q37tt"]
+[ext_resource type="Texture2D" uid="uid://c0sfbtlpkdor3" path="res://BG_Tilesets/RailGlow3.png" id="33_8hkfm"]
+[ext_resource type="Texture2D" uid="uid://df68sx43g438p" path="res://Entity_TileSets/Collectible.png" id="34_4t017"]
+[ext_resource type="AudioStream" uid="uid://c0ag43ad54fow" path="res://Chiptone/PingCollect.wav" id="35_pmmke"]
+[ext_resource type="Texture2D" uid="uid://myb8kikwpwp0" path="res://Entity_TileSets/Plate.png" id="36_4nedp"]
+[ext_resource type="Texture2D" uid="uid://c8tkalqyu66ub" path="res://Entity_TileSets/PlateGlow.png" id="37_7ytpm"]
+[ext_resource type="AudioStream" uid="uid://ooqxhyj4g1w6" path="res://Chiptone/PingHome.wav" id="37_xoc04"]
+[ext_resource type="Script" path="res://Prototyping/Move.gd" id="38_7egne"]
+[ext_resource type="Texture2D" uid="uid://cxef5uxyobylb" path="res://Entity_TileSets/FireflyS1.png" id="39_m73l7"]
+[ext_resource type="Texture2D" uid="uid://dy3um3hmhs1q2" path="res://Prototyping/neutral.webp" id="40_p4kym"]
+[ext_resource type="FontFile" uid="uid://blgxwjhg7kapl" path="res://Imports/vtf-misterpixel.regular.otf" id="41_xmgis"]
+[ext_resource type="Texture2D" uid="uid://8uac5oy10347" path="res://Prototyping/playerPl.png" id="42_8ql3b"]
+[ext_resource type="Texture2D" uid="uid://ca5f4b0vlomu4" path="res://BG_Tilesets/GlowFrameB.png" id="43_kwws5"]
+[ext_resource type="Script" path="res://Prototyping/Centipede.gd" id="44_wy1ue"]
+[ext_resource type="Script" path="res://Prototyping/CentiBody.gd" id="45_44xjj"]
+[ext_resource type="Texture2D" uid="uid://b44midaxiqn0j" path="res://Entity_TileSets/CentiHead.png" id="46_8whj7"]
+[ext_resource type="Texture2D" uid="uid://4c4qiiykfcpn" path="res://Entity_TileSets/CentiBod.png" id="47_7yxmo"]
+[ext_resource type="AudioStream" uid="uid://caa4nkalmdt21" path="res://CrawlyRush.mp3" id="49_s41su"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ytp3k"]
-texture = ExtResource("1_0hdpn")
+texture = ExtResource("2_dd4q8")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0a0se"]
-texture = ExtResource("2_mkjy8")
+texture = ExtResource("3_2d42i")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -64,42 +66,42 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fwpj3"]
-texture = ExtResource("4_knt0s")
+texture = ExtResource("4_80k6x")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ouuw1"]
-texture = ExtResource("5_igldy")
+texture = ExtResource("5_ajplw")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_4mh1n"]
-texture = ExtResource("6_qaa6s")
+texture = ExtResource("6_31f4k")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_je7tc"]
-texture = ExtResource("7_e0t7j")
+texture = ExtResource("7_6302r")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_6b1oi"]
-texture = ExtResource("8_mip5w")
+texture = ExtResource("8_gk4du")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fj8f2"]
-texture = ExtResource("9_5ktcj")
+texture = ExtResource("9_4fknt")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -107,7 +109,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l05jo"]
-texture = ExtResource("10_xcq7r")
+texture = ExtResource("10_eaodf")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -115,7 +117,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_aesko"]
-texture = ExtResource("11_j4j5i")
+texture = ExtResource("11_bo1jg")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -123,7 +125,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0iy3f"]
-texture = ExtResource("12_ujf8s")
+texture = ExtResource("12_c1883")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -131,7 +133,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gfesl"]
-texture = ExtResource("13_sulo3")
+texture = ExtResource("13_mbiv7")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -139,14 +141,14 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kkbta"]
-texture = ExtResource("14_sbiwm")
+texture = ExtResource("14_s83cg")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yxhjt"]
-texture = ExtResource("15_tjraa")
+texture = ExtResource("15_5r5bk")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -154,7 +156,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nlr7c"]
-texture = ExtResource("16_tl2q7")
+texture = ExtResource("16_n6k3n")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -162,7 +164,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yge1i"]
-texture = ExtResource("17_4w0c5")
+texture = ExtResource("17_30mh5")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -170,7 +172,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p86gf"]
-texture = ExtResource("18_adfp7")
+texture = ExtResource("18_s8uar")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -178,7 +180,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5y1f7"]
-texture = ExtResource("19_j86k5")
+texture = ExtResource("19_v6htt")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -186,7 +188,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0vksj"]
-texture = ExtResource("20_2b8am")
+texture = ExtResource("20_pk3uw")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -194,7 +196,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8x5as"]
-texture = ExtResource("21_n1uxc")
+texture = ExtResource("21_cns4f")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -202,7 +204,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yn6h8"]
-texture = ExtResource("22_ojnas")
+texture = ExtResource("22_utkph")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -210,7 +212,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qo8up"]
-texture = ExtResource("23_m5es4")
+texture = ExtResource("23_5qfj7")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -218,7 +220,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fjuq5"]
-texture = ExtResource("24_ya1jk")
+texture = ExtResource("24_r7hnl")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -226,7 +228,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fsbcy"]
-texture = ExtResource("25_n6rlx")
+texture = ExtResource("25_2weoq")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -234,21 +236,21 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bybac"]
-texture = ExtResource("26_v55d6")
+texture = ExtResource("26_pay6j")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kv1j4"]
-texture = ExtResource("27_q84q2")
+texture = ExtResource("27_26k87")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_y4cir"]
-texture = ExtResource("26_25poj")
+texture = ExtResource("28_jovcp")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -256,7 +258,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pd2f6"]
-texture = ExtResource("27_jq7kt")
+texture = ExtResource("29_gwjyp")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -264,7 +266,7 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_atlld"]
-texture = ExtResource("28_icece")
+texture = ExtResource("30_2qha8")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -272,21 +274,21 @@ texture_region_size = Vector2i(32, 32)
 0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-16, -16, 16, -16, 16, 16, -16, 16)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cjdbn"]
-texture = ExtResource("29_o4lgq")
+texture = ExtResource("31_6ld3t")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1dbuc"]
-texture = ExtResource("30_qjyjr")
+texture = ExtResource("32_q37tt")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ubv4u"]
-texture = ExtResource("31_nciy8")
+texture = ExtResource("33_8hkfm")
 texture_region_size = Vector2i(32, 32)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
@@ -339,7 +341,7 @@ blend_mode = 1
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s686g"]
 
 [node name="Node2D" type="Node2D"]
-script = ExtResource("1_qi4l6")
+script = ExtResource("1_p1m0o")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="."]
 color = Color(0, 0.0313726, 0.0784314, 1)
@@ -380,13 +382,13 @@ scale = Vector2(0.75, 0.75)
 shape = SubResource("CircleShape2D_etgmy")
 
 [node name="Sprite2D" type="Sprite2D" parent="Collectible"]
-texture = ExtResource("34_gq73r")
+texture = ExtResource("34_4t017")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="Collectible"]
-stream = ExtResource("7_ka6ix")
-volume_db = 1.0
+stream = ExtResource("35_pmmke")
 autoplay = true
 max_distance = 1000.0
+panning_strength = 2.0
 
 [node name="HomeBase" type="Area2D" parent="."]
 position = Vector2(80, 912)
@@ -397,27 +399,27 @@ scale = Vector2(0.75, 0.75)
 shape = SubResource("CircleShape2D_etgmy")
 
 [node name="Sprite2D" type="Sprite2D" parent="HomeBase"]
-texture = ExtResource("36_8lgop")
+texture = ExtResource("36_4nedp")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="HomeBase"]
-stream = ExtResource("7_ka6ix")
-volume_db = 1.0
-max_distance = 1500.0
+stream = ExtResource("37_xoc04")
+max_distance = 1000.0
+panning_strength = 2.0
 
 [node name="PointLight2D" type="PointLight2D" parent="HomeBase"]
-texture = ExtResource("37_0fslv")
+texture = ExtResource("37_7ytpm")
 
 [node name="Player" type="CharacterBody2D" parent="." groups=["Player"]]
 position = Vector2(144, 846)
 collision_layer = 3
 collision_mask = 3
-script = ExtResource("3_86sf8")
+script = ExtResource("38_7egne")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
 shape = SubResource("CircleShape2D_yinch")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
-texture = ExtResource("37_u0nec")
+texture = ExtResource("39_m73l7")
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
 position = Vector2(0.400002, 0.400002)
@@ -433,10 +435,11 @@ editor_draw_limits = true
 position = Vector2(0.400002, 0.400002)
 color = Color(1, 0.886698, 0.570599, 1)
 shadow_enabled = true
-texture = ExtResource("4_025i8")
+texture = ExtResource("40_p4kym")
 texture_scale = 0.8
 
 [node name="UI_Sound" type="AudioStreamPlayer" parent="."]
+volume_db = -2.0
 
 [node name="UI" type="CanvasLayer" parent="."]
 layer = 2
@@ -447,7 +450,7 @@ offset_left = 2.0
 offset_right = 527.0
 offset_bottom = 34.0
 theme_override_colors/default_color = Color(1, 0.713726, 0.0509804, 1)
-theme_override_fonts/normal_font = ExtResource("40_wmurt")
+theme_override_fonts/normal_font = ExtResource("41_xmgis")
 theme_override_font_sizes/normal_font_size = 34
 bbcode_enabled = true
 text = "SCORE: 0"
@@ -461,7 +464,7 @@ offset_top = 39.0
 offset_right = 1152.0
 offset_bottom = 74.0
 theme_override_colors/default_color = Color(1, 0.713726, 0.0509804, 1)
-theme_override_fonts/normal_font = ExtResource("40_wmurt")
+theme_override_fonts/normal_font = ExtResource("41_xmgis")
 theme_override_font_sizes/normal_font_size = 34
 bbcode_enabled = true
 text = "FRUIT: 0"
@@ -474,7 +477,7 @@ offset_left = 895.0
 offset_right = 1147.0
 offset_bottom = 35.0
 theme_override_colors/default_color = Color(1, 0.701961, 0, 1)
-theme_override_fonts/normal_font = ExtResource("40_wmurt")
+theme_override_fonts/normal_font = ExtResource("41_xmgis")
 theme_override_font_sizes/normal_font_size = 34
 bbcode_enabled = true
 text = "TIME: 0"
@@ -488,7 +491,7 @@ offset_top = 32.0
 offset_right = 254.0
 offset_bottom = 67.0
 theme_override_colors/default_color = Color(1, 0.701961, 0, 1)
-theme_override_fonts/normal_font = ExtResource("40_wmurt")
+theme_override_fonts/normal_font = ExtResource("41_xmgis")
 theme_override_font_sizes/normal_font_size = 34
 bbcode_enabled = true
 text = "LEVEL:"
@@ -499,362 +502,366 @@ text_direction = 1
 visible = false
 position = Vector2(33, -512)
 scale = Vector2(1.68168, 1.69055)
-texture = ExtResource("5_5ru8r")
+texture = ExtResource("42_8ql3b")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 position = Vector2(576, 224)
 scale = Vector2(21.3415, 21.3419)
 energy = 3.0
 blend_mode = 2
-texture = ExtResource("38_jfjol")
+texture = ExtResource("43_kwws5")
 
 [node name="LevelTimer" type="Timer" parent="."]
 one_shot = true
 
 [node name="Centipede" type="Node2D" parent="."]
-script = ExtResource("8_i0fpj")
+script = ExtResource("44_wy1ue")
 
 [node name="Head" type="CharacterBody2D" parent="Centipede"]
 position = Vector2(96, 960)
 rotation = 4.71239
 collision_layer = 0
 collision_mask = 0
-script = ExtResource("9_a2ooy")
+script = ExtResource("45_44xjj")
 
 [node name="Face" type="Sprite2D" parent="Centipede/Head"]
-texture = ExtResource("42_wwf6u")
+texture = ExtResource("46_8whj7")
 
 [node name="Box" type="CollisionShape2D" parent="Centipede/Head"]
 shape = SubResource("RectangleShape2D_s686g")
 
 [node name="PointLight2D" type="PointLight2D" parent="Centipede/Head"]
 blend_mode = 2
-texture = ExtResource("42_wwf6u")
+texture = ExtResource("46_8whj7")
 
 [node name="Body1" type="CharacterBody2D" parent="Centipede"]
 position = Vector2(160, 960)
 rotation = 4.71239
 collision_layer = 0
 collision_mask = 0
-script = ExtResource("9_a2ooy")
+script = ExtResource("45_44xjj")
 
 [node name="Face" type="Sprite2D" parent="Centipede/Body1"]
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Box" type="CollisionShape2D" parent="Centipede/Body1"]
 shape = SubResource("RectangleShape2D_s686g")
 
 [node name="PointLight2D" type="PointLight2D" parent="Centipede/Body1"]
 blend_mode = 2
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Body2" type="CharacterBody2D" parent="Centipede"]
 position = Vector2(224, 960)
 rotation = 4.71239
 collision_layer = 0
 collision_mask = 0
-script = ExtResource("9_a2ooy")
+script = ExtResource("45_44xjj")
 
 [node name="Face" type="Sprite2D" parent="Centipede/Body2"]
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Box" type="CollisionShape2D" parent="Centipede/Body2"]
 shape = SubResource("RectangleShape2D_s686g")
 
 [node name="PointLight2D" type="PointLight2D" parent="Centipede/Body2"]
 blend_mode = 2
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Body3" type="CharacterBody2D" parent="Centipede"]
 position = Vector2(288, 960)
 rotation = 4.71239
 collision_layer = 0
 collision_mask = 0
-script = ExtResource("9_a2ooy")
+script = ExtResource("45_44xjj")
 
 [node name="Face" type="Sprite2D" parent="Centipede/Body3"]
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Box" type="CollisionShape2D" parent="Centipede/Body3"]
 shape = SubResource("RectangleShape2D_s686g")
 
 [node name="PointLight2D" type="PointLight2D" parent="Centipede/Body3"]
 blend_mode = 2
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Body4" type="CharacterBody2D" parent="Centipede"]
 position = Vector2(352, 960)
 rotation = 4.71239
 collision_layer = 0
 collision_mask = 0
-script = ExtResource("9_a2ooy")
+script = ExtResource("45_44xjj")
 
 [node name="Face" type="Sprite2D" parent="Centipede/Body4"]
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Box" type="CollisionShape2D" parent="Centipede/Body4"]
 shape = SubResource("RectangleShape2D_s686g")
 
 [node name="PointLight2D" type="PointLight2D" parent="Centipede/Body4"]
 blend_mode = 2
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Body5" type="CharacterBody2D" parent="Centipede"]
 position = Vector2(416, 960)
 rotation = 4.71239
 collision_layer = 0
 collision_mask = 0
-script = ExtResource("9_a2ooy")
+script = ExtResource("45_44xjj")
 
 [node name="Face" type="Sprite2D" parent="Centipede/Body5"]
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Box" type="CollisionShape2D" parent="Centipede/Body5"]
 shape = SubResource("RectangleShape2D_s686g")
 
 [node name="PointLight2D" type="PointLight2D" parent="Centipede/Body5"]
 blend_mode = 2
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Body6" type="CharacterBody2D" parent="Centipede"]
 position = Vector2(480, 960)
 rotation = 4.71239
 collision_layer = 0
 collision_mask = 0
-script = ExtResource("9_a2ooy")
+script = ExtResource("45_44xjj")
 
 [node name="Face" type="Sprite2D" parent="Centipede/Body6"]
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Box" type="CollisionShape2D" parent="Centipede/Body6"]
 shape = SubResource("RectangleShape2D_s686g")
 
 [node name="PointLight2D" type="PointLight2D" parent="Centipede/Body6"]
 blend_mode = 2
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Body7" type="CharacterBody2D" parent="Centipede"]
 position = Vector2(544, 960)
 rotation = 4.71239
 collision_layer = 0
 collision_mask = 0
-script = ExtResource("9_a2ooy")
+script = ExtResource("45_44xjj")
 
 [node name="Face" type="Sprite2D" parent="Centipede/Body7"]
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Box" type="CollisionShape2D" parent="Centipede/Body7"]
 shape = SubResource("RectangleShape2D_s686g")
 
 [node name="PointLight2D" type="PointLight2D" parent="Centipede/Body7"]
 blend_mode = 2
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Body8" type="CharacterBody2D" parent="Centipede"]
 position = Vector2(608, 960)
 rotation = 4.71239
 collision_layer = 0
 collision_mask = 0
-script = ExtResource("9_a2ooy")
+script = ExtResource("45_44xjj")
 
 [node name="Face" type="Sprite2D" parent="Centipede/Body8"]
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Box" type="CollisionShape2D" parent="Centipede/Body8"]
 shape = SubResource("RectangleShape2D_s686g")
 
 [node name="PointLight2D" type="PointLight2D" parent="Centipede/Body8"]
 blend_mode = 2
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Body9" type="CharacterBody2D" parent="Centipede"]
 position = Vector2(672, 960)
 rotation = 4.71239
 collision_layer = 0
 collision_mask = 0
-script = ExtResource("9_a2ooy")
+script = ExtResource("45_44xjj")
 
 [node name="Face" type="Sprite2D" parent="Centipede/Body9"]
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Box" type="CollisionShape2D" parent="Centipede/Body9"]
 shape = SubResource("RectangleShape2D_s686g")
 
 [node name="PointLight2D" type="PointLight2D" parent="Centipede/Body9"]
 blend_mode = 2
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Body10" type="CharacterBody2D" parent="Centipede"]
 position = Vector2(736, 960)
 rotation = 4.71239
 collision_layer = 0
 collision_mask = 0
-script = ExtResource("9_a2ooy")
+script = ExtResource("45_44xjj")
 
 [node name="Face" type="Sprite2D" parent="Centipede/Body10"]
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Box" type="CollisionShape2D" parent="Centipede/Body10"]
 shape = SubResource("RectangleShape2D_s686g")
 
 [node name="PointLight2D" type="PointLight2D" parent="Centipede/Body10"]
 blend_mode = 2
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Body11" type="CharacterBody2D" parent="Centipede"]
 position = Vector2(800, 960)
 rotation = 4.71239
 collision_layer = 0
 collision_mask = 0
-script = ExtResource("9_a2ooy")
+script = ExtResource("45_44xjj")
 
 [node name="Face" type="Sprite2D" parent="Centipede/Body11"]
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Box" type="CollisionShape2D" parent="Centipede/Body11"]
 shape = SubResource("RectangleShape2D_s686g")
 
 [node name="PointLight2D" type="PointLight2D" parent="Centipede/Body11"]
 blend_mode = 2
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Body12" type="CharacterBody2D" parent="Centipede"]
 position = Vector2(864, 960)
 rotation = 4.71239
 collision_layer = 0
 collision_mask = 0
-script = ExtResource("9_a2ooy")
+script = ExtResource("45_44xjj")
 
 [node name="Face" type="Sprite2D" parent="Centipede/Body12"]
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Box" type="CollisionShape2D" parent="Centipede/Body12"]
 shape = SubResource("RectangleShape2D_s686g")
 
 [node name="PointLight2D" type="PointLight2D" parent="Centipede/Body12"]
 blend_mode = 2
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Body13" type="CharacterBody2D" parent="Centipede"]
 position = Vector2(928, 960)
 rotation = 4.71239
 collision_layer = 0
 collision_mask = 0
-script = ExtResource("9_a2ooy")
+script = ExtResource("45_44xjj")
 
 [node name="Face" type="Sprite2D" parent="Centipede/Body13"]
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Box" type="CollisionShape2D" parent="Centipede/Body13"]
 shape = SubResource("RectangleShape2D_s686g")
 
 [node name="PointLight2D" type="PointLight2D" parent="Centipede/Body13"]
 blend_mode = 2
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Body14" type="CharacterBody2D" parent="Centipede"]
 position = Vector2(992, 960)
 rotation = 4.71239
 collision_layer = 0
 collision_mask = 0
-script = ExtResource("9_a2ooy")
+script = ExtResource("45_44xjj")
 
 [node name="Face" type="Sprite2D" parent="Centipede/Body14"]
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Box" type="CollisionShape2D" parent="Centipede/Body14"]
 shape = SubResource("RectangleShape2D_s686g")
 
 [node name="PointLight2D" type="PointLight2D" parent="Centipede/Body14"]
 blend_mode = 2
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Body15" type="CharacterBody2D" parent="Centipede"]
 position = Vector2(1056, 960)
 rotation = 4.71239
 collision_layer = 0
 collision_mask = 0
-script = ExtResource("9_a2ooy")
+script = ExtResource("45_44xjj")
 
 [node name="Face" type="Sprite2D" parent="Centipede/Body15"]
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Box" type="CollisionShape2D" parent="Centipede/Body15"]
 shape = SubResource("RectangleShape2D_s686g")
 
 [node name="PointLight2D" type="PointLight2D" parent="Centipede/Body15"]
 blend_mode = 2
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Body16" type="CharacterBody2D" parent="Centipede"]
 position = Vector2(1120, 960)
 rotation = 4.71239
 collision_layer = 0
 collision_mask = 0
-script = ExtResource("9_a2ooy")
+script = ExtResource("45_44xjj")
 
 [node name="Face" type="Sprite2D" parent="Centipede/Body16"]
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Box" type="CollisionShape2D" parent="Centipede/Body16"]
 shape = SubResource("RectangleShape2D_s686g")
 
 [node name="PointLight2D" type="PointLight2D" parent="Centipede/Body16"]
 blend_mode = 2
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Body17" type="CharacterBody2D" parent="Centipede"]
 position = Vector2(1120, 896)
 rotation = 3.14159
 collision_layer = 0
 collision_mask = 0
-script = ExtResource("9_a2ooy")
+script = ExtResource("45_44xjj")
 
 [node name="Face" type="Sprite2D" parent="Centipede/Body17"]
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Box" type="CollisionShape2D" parent="Centipede/Body17"]
 shape = SubResource("RectangleShape2D_s686g")
 
 [node name="PointLight2D" type="PointLight2D" parent="Centipede/Body17"]
 blend_mode = 2
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Body18" type="CharacterBody2D" parent="Centipede"]
 position = Vector2(1120, 832)
 rotation = 3.14159
 collision_layer = 0
 collision_mask = 0
-script = ExtResource("9_a2ooy")
+script = ExtResource("45_44xjj")
 
 [node name="Face" type="Sprite2D" parent="Centipede/Body18"]
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Box" type="CollisionShape2D" parent="Centipede/Body18"]
 shape = SubResource("RectangleShape2D_s686g")
 
 [node name="PointLight2D" type="PointLight2D" parent="Centipede/Body18"]
 blend_mode = 2
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Body19" type="CharacterBody2D" parent="Centipede"]
 position = Vector2(1120, 768)
 rotation = 3.14159
 collision_layer = 0
 collision_mask = 0
-script = ExtResource("9_a2ooy")
+script = ExtResource("45_44xjj")
 
 [node name="Face" type="Sprite2D" parent="Centipede/Body19"]
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="Box" type="CollisionShape2D" parent="Centipede/Body19"]
 shape = SubResource("RectangleShape2D_s686g")
 
 [node name="PointLight2D" type="PointLight2D" parent="Centipede/Body19"]
 blend_mode = 2
-texture = ExtResource("43_7sg8a")
+texture = ExtResource("47_7yxmo")
 
 [node name="MoveTimer" type="Timer" parent="."]
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("49_s41su")
+volume_db = -8.0
 
 [connection signal="body_entered" from="Collectible" to="." method="_on_collectible_body_entered"]
 [connection signal="body_entered" from="HomeBase" to="." method="_on_home_base_body_entered"]

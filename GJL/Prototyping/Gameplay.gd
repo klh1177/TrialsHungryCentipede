@@ -1,6 +1,10 @@
 extends Node2D
 #Variables -Sounds
-var collectSound = preload("res://Prototyping/collect.wav")
+var collectSound = preload("res://Chiptone/Collect.wav")
+var pingCollectible = preload("res://Chiptone/PingCollect.wav")
+var pingHome = preload("res://Chiptone/PingHome.wav")
+var failSound = preload("res://Chiptone/Lose2.wav")
+var nextRoundSound = preload("res://Chiptone/NextRound.wav")
 
 #Variables - Location
 var offScreen = Vector2(-200,-22)
@@ -61,7 +65,6 @@ func _ready():
 	currentTime = 150
 	$LevelTimer.start()
 	playing = true
-	start_centipede.connect(_moveCentipede)
 	start_centipede.connect($Centipede.BeginMove)
 	start_centipede.connect($Centipede/Head.BeginMove)
 	start_centipede.connect($Centipede/Body1.BeginMove)
@@ -84,6 +87,10 @@ func _ready():
 	start_centipede.connect($Centipede/Body18.BeginMove)
 	start_centipede.connect($Centipede/Body19.BeginMove)
 	start_centipede.emit()
+	if StatsHolder.GetMusic():
+		$MusicPlayer.play()
+	else:
+		$MusicPlayer.stop()
 
 func GetCurrentTime():
 	return currentTime
@@ -102,13 +109,13 @@ func _process(delta):
 	milsecs = roundi(($LevelTimer.time_left - int($LevelTimer.time_left))*100)
 	
 	if secs < 10 and milsecs < 10:
-		$UI/Time_txt3.text = "Time: " + str(mins) + ":0" + str(secs) + ":0" + str(milsecs)
+		$UI/Time_txt3.text = "TIME: " + str(mins) + ":0" + str(secs) + ":0" + str(milsecs) + " "
 	elif secs < 10:
-		$UI/Time_txt3.text = "Time: " + str(mins) + ":0" + str(secs) + ":" + str(milsecs)
+		$UI/Time_txt3.text = "TIME: " + str(mins) + ":0" + str(secs) + ":" + str(milsecs) + " "
 	elif milsecs < 10:
-		$UI/Time_txt3.text = "Time: " + str(mins) + ":" + str(secs) + ":0" + str(milsecs)
+		$UI/Time_txt3.text = "TIME: " + str(mins) + ":" + str(secs) + ":0" + str(milsecs) + " "
 	else:
-		$UI/Time_txt3.text = "Time: " + str(mins) + ":" + str(secs) + ":" + str(milsecs)
+		$UI/Time_txt3.text = "TIME: " + str(mins) + ":" + str(secs) + ":" + str(milsecs) + " "
 	#$UI/Time_txt3.text = "Time: " + str(snapped($LevelTimer.time_left, 0.01))
 	#Add to total time
 	if playing:
@@ -140,8 +147,9 @@ func _on_home_base_body_entered(body):
 		totalCollected = totalCollected + 1
 		$UI_Sound.stream = collectSound
 		$UI_Sound.play()
-		$UI/Fruit_txt2.text = "Lvl: " + str(level) + " Fruit: " + str(fruitCollected) + "/" + str(fruitTarget)
-		$UI/Score_txt.text = "Score: " + str(playerScore)
+		$UI/Fruit_txt2.text = "FRUIT: " + str(fruitCollected) + "/" + str(fruitTarget)
+		$UI/Score_txt.text = "SCORE: " + str(playerScore)
+		$UI/Lvl_txt4.text = "LEVEL: " + str(level)
 		#Affect the map
 		_updateMaps()
 		_updatePlayer()
@@ -421,7 +429,7 @@ func _updateMaps():
 
 func _on_level_timer_timeout():
 	if fruitCollected >= fruitTarget:
-		$UI_Sound.stream = collectSound
+		$UI_Sound.stream = nextRoundSound
 		$UI_Sound.play()
 		#Subtract amount from collected to reset
 		fruitCollected = fruitCollected - fruitTarget
@@ -445,11 +453,18 @@ func _on_level_timer_timeout():
 		level = level + 1
 		_updateTasks()
 		#Update UI
-		$UI/Fruit_txt2.text = "Lvl: " + str(level) + " Fruit: " + str(fruitCollected) + "/" + str(fruitTarget)
-		$UI/Score_txt.text = "Score: " + str(playerScore)
+		$UI/Fruit_txt2.text = "FRUIT: " + str(fruitCollected) + "/" + str(fruitTarget)
+		$UI/Score_txt.text = "SCORE: " + str(playerScore)
+		$UI/Lvl_txt4.text = "LEVEL: " + str(level)
 	else:
 		#GAME OVER
 		print("Game Over")
+		$UI_Sound.stream = failSound
+		$UI_Sound.play()
+		#SEND SCORE
+		StatsHolder.SendNewScore(playerScore)
+		StatsHolder.SendResults(totalCollected, totalTime)
+		self.queue_free()
 
 func _addLevelBonus():
 	match(level):
@@ -492,32 +507,3 @@ func _addLevelBonus():
 	#IF MORE THAN THAT --> ADD BY MULTIPLES
 	if level >= 300 and level % 50 == 0:
 		playerScore = playerScore + 1000
-
-func _moveCentipede():
-	print("MOVE!")
-	match(currentTime):
-		15:
-			pass
-		30:
-			pass
-		60:
-			pass
-		90:
-			pass
-		120:
-			pass 
-		150:
-			pass
-		180: 
-			pass
-		240: 
-			pass
-
-func _resetCentipdede():
-	#RESET CENTIPEDE LOCATIONS
-	$Centipede/Head.position = Vector2(96, 960)
-	$Centipede/Body1.position = Vector2(160, 960)
-	$Centipede/Body2.position = Vector2(224, 960)
-
-func _startCentipede(time):
-	pass
