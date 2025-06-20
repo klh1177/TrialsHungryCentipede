@@ -58,7 +58,7 @@ func _ready():
 	$UI/Fruit_txt2.text = "Fruit: " + str(fruitCollected) + "/" + str(fruitTarget)
 	$UI/Score_txt.text = "Score: " + str(playerScore)
 	$LevelTimer.wait_time = FIRST_TIMER
-	currentTime = FIRST_TIMER
+	currentTime = 150
 	$LevelTimer.start()
 	playing = true
 	start_centipede.connect(_moveCentipede)
@@ -153,105 +153,106 @@ func _updateTasks():
 		2:
 			fruitTarget = 5
 			$LevelTimer.wait_time = FIRST_TIMER
-			currentTime = $LevelTimer.wait_time 
+			currentTime = 150 
 			$LevelTimer.start()
 		3:
 			fruitTarget = 7
 			$LevelTimer.wait_time = FIRST_TIMER
-			currentTime = $LevelTimer.wait_time        
+			currentTime = 150        
 			$LevelTimer.start()
 		4:
 			fruitTarget = 10
 			$LevelTimer.wait_time = FIRST_TIMER
-			currentTime = $LevelTimer.wait_time       
+			currentTime = 150       
 			$LevelTimer.start()
 		#TIER TWO: 2:00 for 4-9 apples
 		5:
 			fruitTarget = 3
 			$LevelTimer.wait_time = FIRST_TIMER - 30
-			currentTime = $LevelTimer.wait_time
+			currentTime = 120
 			$LevelTimer.start()
 		6:
 			fruitTarget = 5
 			$LevelTimer.wait_time = FIRST_TIMER - 30
-			currentTime = $LevelTimer.wait_time
+			currentTime = 120
 			$LevelTimer.start()
 		7:
 			fruitTarget = 7
 			$LevelTimer.wait_time = FIRST_TIMER - 30
-			currentTime = $LevelTimer.wait_time
+			currentTime = 120
 			$LevelTimer.start()
 		8:
 			fruitTarget = 9
 			$LevelTimer.wait_time = FIRST_TIMER - 30
-			currentTime = $LevelTimer.wait_time
+			currentTime = 120
 			$LevelTimer.start()
 		#TIER THREE: 1:30 for 3-8 apples
 		9:
 			fruitTarget = 2
 			$LevelTimer.wait_time = FIRST_TIMER - 60
-			currentTime = $LevelTimer.wait_time
+			currentTime = 90
 			$LevelTimer.start()
 		10:
 			fruitTarget = 4
 			$LevelTimer.wait_time = FIRST_TIMER - 60
-			currentTime = $LevelTimer.wait_time
+			currentTime = 90
+			$LevelTimer.start()
 		11:
 			fruitTarget = 6
 			$LevelTimer.wait_time = FIRST_TIMER - 60
-			currentTime = $LevelTimer.wait_time
+			currentTime = 90
 			$LevelTimer.start()
 		12:
 			fruitTarget = 8
 			$LevelTimer.wait_time = FIRST_TIMER - 60
-			currentTime = $LevelTimer.wait_time
+			currentTime = 90
 			$LevelTimer.start()
 		#TIER FOUR: 1:00 for 2-7 apples
 		13:
 			fruitTarget = 1
 			$LevelTimer.wait_time = FIRST_TIMER - 90
-			currentTime = $LevelTimer.wait_time
+			currentTime = 60
 			$LevelTimer.start()
 		14:
 			fruitTarget = 3
 			$LevelTimer.wait_time = FIRST_TIMER - 90
-			currentTime = $LevelTimer.wait_time
+			currentTime = 60
 			$LevelTimer.start()
 		15:
 			fruitTarget = 5
 			$LevelTimer.wait_time = FIRST_TIMER - 90
-			currentTime = $LevelTimer.wait_time
+			currentTime = 60
 			$LevelTimer.start()
 		16:
 			fruitTarget = 7
 			$LevelTimer.wait_time = FIRST_TIMER - 90
-			currentTime = $LevelTimer.wait_time
+			currentTime = 60
 			$LevelTimer.start()
 		#TIER FIVE: :30 for 1-6 apples
 		17:
 			fruitTarget = 1
 			$LevelTimer.wait_time = FIRST_TIMER - 120
-			currentTime = $LevelTimer.wait_time
+			currentTime = 30
 			$LevelTimer.start()
 		18:
 			fruitTarget = 2
 			$LevelTimer.wait_time = FIRST_TIMER - 120
-			currentTime = $LevelTimer.wait_time
+			currentTime = 30
 			$LevelTimer.start()
 		19:
 			fruitTarget = 4
 			$LevelTimer.wait_time = FIRST_TIMER - 120
-			currentTime = $LevelTimer.wait_time
+			currentTime = 30
 			$LevelTimer.start()
 		#TIER SIX: :15 for 1 apples
 		20:
 			fruitTarget = 1
 			$LevelTimer.wait_time = FIRST_TIMER - 135
-			currentTime = $LevelTimer.wait_time
+			currentTime = 15
 			$LevelTimer.start()
 	if level >= 21 and level < 50:
-		$LevelTimer.wait_time = timers.pick_random()
-		currentTime = $LevelTimer.wait_time
+		currentTime = timers.pick_random()
+		$LevelTimer.wait_time = currentTime
 		#[30, 60, 90, 120, 150, 180, 240] TIMES CASE CHOOSE FROM AFTER CERTIAN NUM LEVELS
 		match($LevelTimer.wait_time):
 			30:
@@ -270,8 +271,8 @@ func _updateTasks():
 				fruitTarget = randi_range(7, 11)
 		$LevelTimer.start()
 	elif level >= 50:
-		$LevelTimer.wait_time = timers.pick_random()
-		currentTime = $LevelTimer.wait_time
+		currentTime = timers.pick_random()
+		$LevelTimer.wait_time = currentTime
 		#[30, 60, 90, 120, 150, 180, 240] TIMES CASE CHOOSE FROM AFTER CERTIAN NUM LEVELS
 		match($LevelTimer.wait_time):
 			30:
@@ -510,8 +511,6 @@ func _moveCentipede():
 		180: 
 			pass
 		240: 
-			pass
-		300:
 			pass
 
 func _resetCentipdede():

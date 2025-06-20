@@ -11,32 +11,39 @@ var v180 = 28.0
 var v240 = 21.0
 var time
 var origin
+var originRotation
 
 func _ready():
 	origin = self.position
+	originRotation = self.rotation
 
 func _physics_process(delta):
 	if self.position.x <= 32 and self.position.y == 960:
 		self.position = Vector2(32,960)
 		velocity.x = 0
 		velocity.y = _getVelocity() * -1
+		self.rotation_degrees = 0
 	if self.position.x >= 1120 and self.position.y == -512:
 		self.position = Vector2(1120,-512)
 		velocity.x = 0
 		velocity.y = _getVelocity()
+		self.rotation_degrees = 180
 	if self.position.x == 32 and self.position.y <= -512:
 		self.position = Vector2(32,-512)
 		velocity.x = _getVelocity()
 		velocity.y = 0
+		self.rotation_degrees = 90
 	if self.position.x == 1120 and self.position.y >= 960:
 		self.position = Vector2(1120,960)
 		velocity.x = _getVelocity() * -1
 		velocity.y = 0
+		self.rotation_degrees = 270
 
 	move_and_slide()
 
 func BeginMove():
 	self.position = origin
+	self.rotation = originRotation
 	time = $"../..".GetCurrentTime()
 	if self.position.y == 960:
 		velocity.x = _getVelocity() * -1
@@ -71,5 +78,6 @@ func _getVelocity():
 			return v240
 
 func _on_level_timer_timeout():
-	velocity.x = 0
-	velocity.y = 0
+	#velocity.x = 0
+	#velocity.y = 0
+	pass
