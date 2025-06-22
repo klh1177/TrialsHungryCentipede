@@ -45,6 +45,9 @@ func _ready():
 	$Maps/Map3.position = mapOffScreen
 	$Maps/Map4.position = mapOffScreen
 	$Maps/Map5.position = mapOffScreen
+	$Maps/Map6.position = mapOffScreen
+	$Maps/Map7.position = mapOffScreen
+	$Maps/Map8.position = mapOffScreen
 	#make collectible ready
 	$Collectible.position = Vector2(191,611) #Start with a close one to gauge how to play
 	$Collectible/AudioStreamPlayer2D.play()
@@ -258,7 +261,7 @@ func _updateTasks():
 			$LevelTimer.wait_time = FIRST_TIMER - 135
 			currentTime = 15
 			$LevelTimer.start()
-	if level >= 21 and level < 50:
+	if level >= 21 and level < 40:
 		currentTime = timers.pick_random()
 		$LevelTimer.wait_time = currentTime
 		#[30, 60, 90, 120, 150, 180, 240] TIMES CASE CHOOSE FROM AFTER CERTIAN NUM LEVELS
@@ -278,7 +281,7 @@ func _updateTasks():
 			240:
 				fruitTarget = randi_range(7, 11)
 		$LevelTimer.start()
-	elif level >= 50:
+	elif level >= 40:
 		currentTime = timers.pick_random()
 		$LevelTimer.wait_time = currentTime
 		#[30, 60, 90, 120, 150, 180, 240] TIMES CASE CHOOSE FROM AFTER CERTIAN NUM LEVELS
@@ -341,7 +344,45 @@ func _updatePlayer():
 func _updateMaps():
 	#Called after certain returns and scores to spice up gameplay
 	#ADD: 5 New maps that only show up after 5000k points
-	if playerScore >= 3200:
+	if playerScore >= 5000:
+		#Remove prev map
+		match(currentMap):
+			1:
+				$Maps/Map1.position = mapOffScreen
+			2:
+				$Maps/Map2.position = mapOffScreen
+			3:
+				$Maps/Map3.position = mapOffScreen
+			4:
+				$Maps/Map4.position = mapOffScreen
+			5:
+				$Maps/Map5.position = mapOffScreen
+			6:
+				$Maps/Map6.position = mapOffScreen
+			7:
+				$Maps/Map7.position = mapOffScreen
+			8:
+				$Maps/Map8.position = mapOffScreen
+		currentMap = randi_range(1,8)
+		#Get new map
+		match(currentMap):
+			1:
+				$Maps/Map1.position = mapOnScreen
+			2:
+				$Maps/Map2.position = mapOnScreen
+			3:
+				$Maps/Map3.position = mapOnScreen
+			4:
+				$Maps/Map4.position = mapOnScreen
+			5:
+				$Maps/Map5.position = mapOnScreen
+			6:
+				$Maps/Map6.position = mapOnScreen
+			7:
+				$Maps/Map7.position = mapOnScreen
+			8:
+				$Maps/Map8.position = mapOnScreen
+	elif playerScore >= 3000:
 		#Remove prev map
 		match(currentMap):
 			1:
@@ -367,7 +408,7 @@ func _updateMaps():
 				$Maps/Map4.position = mapOnScreen
 			5:
 				$Maps/Map5.position = mapOnScreen
-	elif playerScore >= 2300:
+	elif playerScore >= 2200:
 		#Update current map
 		if currentMap >= 5:
 			currentMap = 1
@@ -389,19 +430,19 @@ func _updateMaps():
 			5:
 				$Maps/Map4.position = mapOffScreen
 				$Maps/Map5.position = mapOnScreen
-	elif playerScore >= 2200:
+	elif playerScore >= 2100:
 		$Maps/Map4.position = mapOffScreen
 		$Maps/Map5.position = mapOnScreen
 		currentMap = 5
-	elif playerScore >= 2100:
+	elif playerScore >= 2000:
 		$Maps/Map3.position = mapOffScreen
 		$Maps/Map4.position = mapOnScreen
 		currentMap = 4
-	elif playerScore >= 2000:
+	elif playerScore >= 1900:
 		$Maps/Map2.position = mapOffScreen
 		$Maps/Map3.position = mapOnScreen
 		currentMap = 3
-	elif playerScore >= 1900:
+	elif playerScore >= 1800:
 		$Maps/Map1.position = mapOffScreen
 		$Maps/Map2.position = mapOnScreen
 		currentMap = 2
